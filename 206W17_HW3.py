@@ -54,7 +54,10 @@ for line in fi:
 
 
 ## (d) Write Python code to determine how many of these paths describe a Microsoft file (a file that EITHER ends with .docx OR .xlsx, but nothing else counts) where the file name ends in a digit. Save that total in the variable microsoft_files_num.
-
+microsoft_files_num = 0
+for line in fi:
+    if re.search("\d\.docx|\d\.xlsx", line):
+        microsoft_files_num += 1        
 
 
 
