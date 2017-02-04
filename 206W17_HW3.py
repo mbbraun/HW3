@@ -46,7 +46,10 @@ for line in fi:
 
 ## (c) Write Python code to determine how many of these paths describe a Python file saved inside a folder called SI206. Save that number in the variable python_course_paths.
 python_course_paths = 0
-
+for line in fi:
+    if re.search("SI206.+\.py", line):
+        python_course_paths += 1
+        print (line)
 
 
 
